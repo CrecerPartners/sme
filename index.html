@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Growth System | BlueRock Technologies</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bluerock: {
+                            navy: '#021224',
+                            blue: '#1a73e8',
+                            bluedark: '#1557b0',
+                            accent: '#0095ff',
+                            light: '#f8f9fa',
+                            softblue: '#f0f7ff',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #3c4043;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.5px;
+        }
+        
+        .btn-primary {
+            background-color: #1a73e8;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #1557b0;
+            box-shadow: 0 4px 14px rgba(26, 115, 232, 0.4);
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.1);
+            border-color: white;
+        }
+        
+        /* Value table responsive */
+        @media (max-width: 768px) {
+            .value-table-header { display: none; }
+            .value-row { flex-direction: column; padding: 1.5rem !important; gap: 0.75rem; border-bottom: 1px solid #e2e8f0;}
+            .value-row > div { width: 100% !important; padding: 0 !important; }
+            .value-row .mobile-label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: #94a3b8; font-weight: 600; margin-bottom: 0.1rem;}
+            .feature-name { font-size: 1.1rem; font-weight: 600; color: #1e293b; margin-bottom: 0.5rem; }
+        }
+        @media (min-width: 769px) {
+            .mobile-label { display: none; }
+            .value-row { display: flex; align-items: center; border-bottom: 1px solid #f1f5f9; }
+            .value-row > div { padding: 1.25rem 1.5rem; }
+            .feature-name { font-weight: 500; color: #334155; }
+        }
+        
+        /* Float animations for hero UI */
+        .float-ui-1 { animation: float 6s ease-in-out infinite; }
+        .float-ui-2 { animation: float 8s ease-in-out infinite reverse; }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Hide scrollbar for carousels */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-white overflow-x-hidden">
+
+    <!-- NAV -->
+    <nav class="absolute top-0 left-0 w-full z-50 py-4 sm:py-6 px-4 sm:px-6 lg:px-12 flex justify-between items-center">
+        <a href="#" class="flex items-center h-8 sm:h-10 w-32 sm:w-40 overflow-visible relative">
+            <img src="assets/bluerock-logo.png" alt="BlueRock Technologies" class="absolute left-0 top-1/2 transform -translate-y-1/2 scale-[1.7] sm:scale-[2] origin-left filter brightness-0 invert">
+        </a>
+        
+        <a href="#sales" class="bg-[#0095ff] text-white px-6 py-2.5 rounded-full font-heading font-medium text-sm hidden sm:flex items-center gap-2 hover:bg-[#007acc] transition">
+            Talk to Sales
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative w-full min-h-[100dvh] flex flex-col justify-center overflow-hidden bg-[#021224] text-center pt-24 pb-16 md:pt-32 md:pb-24">
+        <!-- Background Video/Image & Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=1920" alt="Nigerian Business Professional" class="w-full h-full object-cover opacity-50">
+            <!-- Scrim (Dark Overlay) -->
+            <div class="absolute inset-0 bg-gradient-to-b from-[#021224]/80 via-[#021224]/60 to-[#021224]"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 w-full flex-grow flex flex-col justify-center">
+            
+            <h1 class="text-[2.75rem] sm:text-[3.25rem] md:text-5xl lg:text-[4.5rem] font-black font-heading text-white leading-[1.05] mb-5 sm:mb-6 tracking-tighter drop-shadow-lg mx-auto px-1 sm:px-0">
+                If your website isn’t helping you win customers and grow revenue, <span class="text-[#0095ff]">it’s not doing enough.</span>
+            </h1>
+            
+            <p class="text-base sm:text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed px-2 sm:px-0 font-medium">
+                Get the tools to attract customers, capture enquiries, follow up faster and turn more opportunities into revenue.
+            </p>
+            
+            <div class="bg-red-500/10 border border-red-500/20 px-4 md:px-6 py-3.5 md:py-4 rounded-xl mb-8 mx-auto max-w-lg shadow-[0_4px_20px_rgba(255,0,0,0.1)] backdrop-blur-md">
+                <p class="text-[#ff4444] font-bold text-sm md:text-base text-center leading-snug">
+                    You pay for the tools, We give you a website worth ₦500K FREE!<br/>
+                    <span class="text-white mt-1 block font-semibold tracking-wide uppercase text-xs">Offer ends in 48 hours. Hurry!</span>
+                </p>
+            </div>
+            
+            <div class="flex justify-center w-full">
+                <a href="#sales" class="bg-[#0095ff] text-white px-10 py-4.5 rounded-full font-heading font-bold text-[1.1rem] flex items-center justify-center gap-2 shadow-[0_8px_20px_rgba(0,149,255,0.4)] hover:-translate-y-1 transition duration-300 w-full sm:w-auto mx-4 sm:mx-0">
+                    Talk to Sales
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+            </div>
+            
+        </div>
+
+        <!-- Scrolldown -->
+        <div class="relative z-10 mt-12 flex flex-col items-center gap-2 opacity-50">
+            <span class="text-[0.65rem] uppercase tracking-widest text-white font-bold">Scroll for full offer</span>
+            <div class="w-5 h-8 border-2 border-white rounded-full flex justify-center pt-1.5">
+                <div class="w-1 h-2 bg-white rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 2: WHAT YOUR WEBSITE SHOULD ACTUALLY DO -->
+    <section class="py-12 lg:py-24 px-6 bg-gray-50/50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-4xl mx-auto mb-10 lg:mb-20">
+                <h2 class="text-[2.25rem] md:text-4xl lg:text-[2.75rem] font-bold font-heading text-[#021224] leading-[1.05] mb-6 tracking-tight">
+                    If Your Website Is Working Properly, This Is What It Should Be Doing for Your Business
+                </h2>
+            </div>
+            
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-8 mb-10 lg:mb-16">
+                
+                <!-- Card 1: Search -->
+                <div class="bg-[#fcfdff] border-2 border-gray-200/80 rounded-[20px] p-6 lg:p-8 shadow-sm hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:border-blue-200 transition-all duration-300 flex flex-col h-full group">
+                    <div class="h-32 bg-white rounded-xl mb-6 lg:mb-8 p-5 border border-gray-100 flex flex-col justify-center gap-3 shadow-sm group-hover:-translate-y-2 transition-transform duration-300">
+                        <div class="h-10 w-full bg-white rounded-full border border-gray-300 flex items-center px-4 shadow-sm">
+                            <i class="ph-bold ph-magnifying-glass text-[#1a73e8] mr-3 text-lg"></i>
+                            <span class="text-xs sm:text-sm font-medium text-gray-800 truncate">hotels in Lekki Phase 1</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-2 mt-1">
+                            <span class="px-1.5 py-0.5 bg-[#f0f7ff] text-[#1a73e8] text-[10px] font-bold rounded border border-blue-200 whitespace-nowrap">AI Match</span>
+                            <span class="text-sm font-bold text-[#021224] truncate">Your Business Name</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-[#021224] mb-3 leading-snug">1. Bringing You Into the Search</h3>
+                    <p class="text-gray-500 leading-relaxed text-[0.95rem]">
+                        When people are searching on Google or using AI tools to find businesses like yours, your business should be showing up.
+                    </p>
+                </div>
+
+                <!-- Card 2: Leads -->
+                <div class="bg-[#fcfdff] border-2 border-gray-200/80 rounded-[20px] p-6 lg:p-8 shadow-sm hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:border-blue-200 transition-all duration-300 flex flex-col h-full group">
+                    <div class="h-32 bg-white rounded-xl mb-6 lg:mb-8 p-4 border border-gray-100 flex flex-col justify-center shadow-sm group-hover:-translate-y-2 transition-transform duration-300">
+                        <div class="bg-white border border-gray-200 shadow-sm rounded-lg p-3 flex justify-between items-center w-full">
+                            <div class="flex items-center gap-2">
+                                <i class="ph-fill ph-instagram-logo text-pink-500 text-2xl flex-shrink-0"></i>
+                                <div>
+                                    <div class="text-[11px] sm:text-xs font-bold text-gray-900 leading-tight">New Enquiry</div>
+                                    <div class="text-[9px] sm:text-[10px] text-gray-500 mt-0.5 truncate max-w-[80px] sm:max-w-[100px]">"How much for..."</div>
+                                </div>
+                            </div>
+                            <span class="bg-blue-50 text-[#0095ff] border border-blue-100 text-[8px] font-bold px-2 py-1 rounded-full uppercase tracking-wider whitespace-nowrap ml-1 flex-shrink-0">Added to Leads</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-[#021224] mb-3 leading-snug">2. Turning Attention Into Leads</h3>
+                    <p class="text-gray-500 leading-relaxed text-[0.95rem]">
+                        People coming from Instagram, WhatsApp, ads or your website should not disappear. Their enquiries should be captured in one place so you can actually follow up.
+                    </p>
+                </div>
+
+                <!-- Card 3: Follow-up -->
+                <div class="bg-[#fcfdff] border-2 border-gray-200/80 rounded-[20px] p-6 lg:p-8 shadow-sm hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:border-blue-200 transition-all duration-300 flex flex-col h-full group">
+                    <div class="h-32 bg-white rounded-xl mb-6 lg:mb-8 p-4 border border-gray-100 flex flex-col justify-center shadow-sm group-hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex items-center justify-between w-full px-2">
+                            <div class="flex flex-col items-center gap-1.5">
+                                <div class="w-10 h-10 bg-green-50 border border-green-200 shadow-sm rounded-full flex items-center justify-center text-green-600"><i class="ph-fill ph-whatsapp-logo text-xl"></i></div>
+                                <span class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">Day 1</span>
+                            </div>
+                            <div class="flex-grow border-t-2 border-dashed border-blue-300 mx-3 relative">
+                                <i class="ph-bold ph-caret-right text-blue-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-1"></i>
+                            </div>
+                            <div class="flex flex-col items-center gap-1.5">
+                                <div class="w-10 h-10 bg-blue-50 border border-blue-200 shadow-sm rounded-full flex items-center justify-center text-blue-600"><i class="ph-fill ph-envelope-simple text-xl"></i></div>
+                                <span class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">Day 3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-[#021224] mb-3 leading-snug">3. Following Up Without Chasing Everyone Manually</h3>
+                    <p class="text-gray-500 leading-relaxed text-[0.95rem]">
+                        Your system should help you stay on top of prospects across WhatsApp, email and other channels without your team having to remember every single follow-up.
+                    </p>
+                </div>
+
+                <!-- Card 4: Conversion -->
+                <div class="bg-[#fcfdff] border-2 border-gray-200/80 rounded-[20px] p-6 lg:p-8 shadow-sm hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:border-blue-200 transition-all duration-300 flex flex-col h-full group">
+                    <div class="h-32 bg-white rounded-xl mb-6 lg:mb-8 p-4 border border-gray-100 flex flex-col justify-center items-center shadow-sm group-hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-full text-center mb-2.5 text-[10px] font-bold text-gray-500 uppercase tracking-widest">Select Time</div>
+                        <div class="flex gap-2 w-full justify-center px-2">
+                            <div class="px-3 py-1.5 border border-gray-200 bg-white rounded-lg text-xs font-bold text-gray-400 line-through">09:00</div>
+                            <div class="px-3 py-1.5 border-2 border-[#0095ff] bg-[#f0f7ff] rounded-lg text-xs font-bold text-[#0095ff] shadow-sm cursor-pointer">10:30 AM</div>
+                        </div>
+                        <div class="mt-3 w-[75%] bg-[#021224] text-white text-[10px] font-bold py-2 rounded-md text-center uppercase tracking-wider cursor-pointer shadow-md">Confirm Booking</div>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-[#021224] mb-3 leading-snug">4. Moving People Closer to Buying</h3>
+                    <p class="text-gray-500 leading-relaxed text-[0.95rem]">
+                        Your website should make it easy for people to book, enquire, request a quote, make contact or take the next step immediately.
+                    </p>
+                </div>
+
+                <!-- Card 5: Tracking -->
+                <div class="bg-[#fcfdff] border-2 border-gray-200/80 rounded-[20px] p-6 lg:p-8 shadow-sm hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:border-blue-200 transition-all duration-300 flex flex-col h-full group">
+                    <div class="h-32 bg-white rounded-xl mb-6 lg:mb-8 p-5 border border-gray-100 flex flex-col justify-center gap-3 shadow-sm group-hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex justify-between items-end w-full pb-2 border-b border-gray-100">
+                            <div>
+                                <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest mb-1">Total Revenue</div>
+                                <div class="text-lg font-bold font-heading text-gray-900 leading-none">₦2,450,000</div>
+                            </div>
+                            <span class="text-[9px] font-bold text-green-600 flex items-center bg-green-50 px-1.5 py-0.5 rounded border border-green-100"><i class="ph-bold ph-trend-up mr-1"></i>+24%</span>
+                        </div>
+                        <div class="flex flex-col gap-2 mt-1">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[10px] font-medium text-gray-500">Top Search:</span>
+                                <span class="text-[10px] font-bold text-gray-800">Booking Page</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[10px] font-medium text-gray-500">Top Service:</span>
+                                <span class="text-[10px] font-bold text-[#0095ff]">Premium Suite</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-[#021224] mb-3 leading-snug">5. Showing You What Is Actually Making You Money</h3>
+                    <p class="text-gray-500 leading-relaxed text-[0.95rem]">
+                        You should know where your leads are coming from, what campaigns are working, and which activities are producing real business.
+                    </p>
+                </div>
+
+                <!-- Card 6: Retention -->
+                <div class="bg-[#fcfdff] border-2 border-gray-200/80 rounded-[20px] p-6 lg:p-8 shadow-sm hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:border-blue-200 transition-all duration-300 flex flex-col h-full group">
+                    <div class="h-32 bg-white rounded-xl mb-6 lg:mb-8 p-4 border border-gray-100 flex flex-col justify-center shadow-sm group-hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-yellow-400 text-white text-[8px] font-bold px-2 py-1 rounded-bl-lg uppercase tracking-wider shadow-sm">VIP Member</div>
+                        <div class="flex items-center gap-3 mt-2 bg-white border border-gray-100 p-2.5 rounded-lg shadow-sm">
+                            <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0">
+                                <i class="ph-fill ph-user text-gray-400 text-xl mt-1.5"></i>
+                            </div>
+                            <div>
+                                <div class="text-[13px] font-bold text-gray-900 leading-none">Sarah Johnson</div>
+                                <div class="text-[9px] text-gray-500 font-medium mt-1">Purchased 4 times</div>
+                                <div class="flex text-yellow-400 text-[10px] mt-1.5 gap-0.5">
+                                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-[#021224] mb-3 leading-snug">6. Helping You Sell Again to Existing Customers</h3>
+                    <p class="text-gray-500 leading-relaxed text-[0.95rem]">
+                        The people who have already bought from you should not disappear. You should have a system to keep engaging them, reward them and bring them back.
+                    </p>
+                </div>
+                
+            </div>
+            
+            <!-- Closing & CTA -->
+            <div class="text-center max-w-3xl mx-auto pt-10">
+                <p class="text-[1.35rem] font-medium text-[#021224] mb-4 leading-snug">
+                    If your website isn’t doing these things, you’re leaving leads, customers and revenue on the table.
+                </p>
+                
+                <p class="text-lg text-gray-600 mb-6">
+                    That’s exactly what our business growth tools help you fix.
+                </p>
+                
+                <p class="text-[#ff4d4d] font-bold text-lg md:text-xl mb-8 mx-auto">
+                    We connect the tools and set up the system that helps your business attract, capture, follow up, convert and retain customers while you get a brand new website worth ₦500K for FREE!
+                </p>
+                
+                <a href="#sales" class="inline-flex items-center justify-center bg-[#0095ff] text-white px-10 py-4 rounded-full font-heading font-semibold text-lg gap-2 shadow-[0_8px_20px_rgba(0,149,255,0.4)] hover:-translate-y-1 transition duration-300 w-full sm:w-auto">
+                    Get Started Now
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- SECTION 3: CHOOSE YOUR PATH -->
+    <section class="py-24 px-6 bg-[#fcfdff] border-t border-gray-100">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-16">
+                
+                <!-- Card 1: Already Have a Website -->
+                <div class="bg-white border-2 border-gray-200/70 rounded-[24px] p-8 lg:p-10 shadow-sm hover:shadow-[0_12px_40px_rgb(0,0,0,0.06)] hover:border-blue-200 transition-all duration-300 flex flex-col h-full group">
+                    <div class="w-14 h-14 bg-gray-50 text-gray-700 rounded-xl flex items-center justify-center mb-8 border border-gray-200 shadow-sm group-hover:bg-blue-50 group-hover:text-[#0095ff] group-hover:border-blue-100 transition-colors">
+                        <i class="ph-bold ph-magnifying-glass-plus text-2xl"></i>
+                    </div>
+                    <h3 class="text-[2.25rem] lg:text-[2.5rem] font-bold font-heading text-[#021224] leading-[1.05] mb-4 tracking-tight">Already Have a Website?</h3>
+                    <p class="text-gray-500 mb-8 leading-relaxed text-[1.05rem]">
+                        We’ll audit it, find where you’re leaking customers, fix what’s missing, and connect the business growth tools around it.
+                    </p>
+                    <p class="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">So your website can help you:</p>
+                    <ul class="space-y-3.5 mb-2 flex-grow">
+                        <li class="flex items-center gap-3 text-gray-600 font-medium"><i class="ph-bold ph-check text-green-500 shrink-0 text-lg"></i> Capture leads</li>
+                        <li class="flex items-center gap-3 text-gray-600 font-medium"><i class="ph-bold ph-check text-green-500 shrink-0 text-lg"></i> Track enquiries and activity</li>
+                        <li class="flex items-center gap-3 text-gray-600 font-medium"><i class="ph-bold ph-check text-green-500 shrink-0 text-lg"></i> Follow up faster</li>
+                        <li class="flex items-center gap-3 text-gray-600 font-medium"><i class="ph-bold ph-check text-green-500 shrink-0 text-lg"></i> Manage customers in one place</li>
+                        <li class="flex items-center gap-3 text-gray-600 font-medium"><i class="ph-bold ph-check text-green-500 shrink-0 text-lg"></i> Improve conversion</li>
+                        <li class="flex items-center gap-3 text-gray-600 font-medium"><i class="ph-bold ph-check text-green-500 shrink-0 text-lg"></i> Bring customers back</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: No Website -->
+                <div class="bg-white border-2 border-gray-200/70 rounded-[24px] p-8 lg:p-10 shadow-sm hover:shadow-[0_12px_40px_rgb(0,0,0,0.06)] hover:border-blue-200 transition-all duration-300 flex flex-col h-full group">
+                    <div class="w-14 h-14 bg-gray-50 text-gray-700 rounded-xl flex items-center justify-center mb-8 border border-gray-200 shadow-sm group-hover:bg-blue-50 group-hover:text-[#0095ff] group-hover:border-blue-100 transition-colors">
+                        <i class="ph-bold ph-layout text-2xl"></i>
+                    </div>
+                    <h3 class="text-[2.25rem] lg:text-[2.5rem] font-bold font-heading text-[#021224] leading-[1.05] mb-4 tracking-tight">No Website at All?</h3>
+                    <p class="text-gray-500 mb-8 leading-relaxed text-[1.05rem]">
+                        You pay for the Business Growth Tools, and we build your website, normally worth ₦500K <span class="text-[#ff4d4d] font-bold">FREE</span>.
+                    </p>
+                    <p class="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">Built from day one to:</p>
+                    <ul class="space-y-3.5 mb-2 flex-grow">
+                        <li class="flex items-center gap-3 text-gray-600 font-medium"><i class="ph-bold ph-check text-[#0095ff] shrink-0 text-lg"></i> Capture leads</li>
+                        <li class="flex items-center gap-3 text-gray-600 font-medium"><i class="ph-bold ph-check text-[#0095ff] shrink-0 text-lg"></i> Track customer activity</li>
+                        <li class="flex items-center gap-3 text-gray-600 font-medium"><i class="ph-bold ph-check text-[#0095ff] shrink-0 text-lg"></i> Support bookings and enquiries</li>
+                        <li class="flex items-center gap-3 text-gray-600 font-medium"><i class="ph-bold ph-check text-[#0095ff] shrink-0 text-lg"></i> Connect to your CRM</li>
+                        <li class="flex items-center gap-3 text-gray-600 font-medium"><i class="ph-bold ph-check text-[#0095ff] shrink-0 text-lg"></i> Automate follow-up</li>
+                        <li class="flex items-center gap-3 text-gray-600 font-medium"><i class="ph-bold ph-check text-[#0095ff] shrink-0 text-lg"></i> Help you convert and retain customers</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Closing & CTA -->
+            <div class="text-center max-w-3xl mx-auto pt-4">
+                <p class="text-xl md:text-[1.35rem] font-medium text-[#021224] mb-8 leading-snug">
+                    Whether you already have a website or you’re starting from scratch, we’ll build the system that helps it actually work for your business.
+                </p>
+                <a href="#sales" class="inline-flex items-center justify-center bg-[#0095ff] text-white px-10 py-4 rounded-full font-heading font-semibold text-lg gap-2 shadow-[0_8px_20px_rgba(0,149,255,0.4)] hover:-translate-y-1 transition duration-300 w-full sm:w-auto">
+                    Book a Consultation
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- SECTION 4: THE VALUE STACK -->
+    <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-[2.25rem] md:text-4xl lg:text-[2.75rem] font-bold font-heading text-[#021224] leading-[1.05] mb-5 tracking-tight">
+                    Let’s show you exactly what you’re paying for without leaving anything out.
+                </h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    This is not just a website. This is all the tools you need to attract, capture, understand, follow up, and retain customers—everything you need to grow your business, managed in one place.
+                </p>
+            </div>
+            
+            <!-- The Stack Card -->
+            <div class="bg-white rounded-[24px] shadow-[0_20px_60px_rgb(0,0,0,0.06)] border border-gray-200 overflow-hidden mb-12">
+                
+                <!-- Desktop Header -->
+                <div class="hidden md:flex items-center bg-[#021224] text-white px-10 py-5">
+                    <div class="w-3/5 font-heading font-semibold text-sm uppercase tracking-wider text-gray-300">What’s Included in the System</div>
+                    <div class="w-1/5 font-heading font-semibold text-sm uppercase tracking-wider text-gray-400 text-right pr-4">Regular Value</div>
+                    <div class="w-1/5 font-heading font-bold text-[#0095ff] text-sm uppercase tracking-wider text-right">Offer Price</div>
+                </div>
+                
+                <div class="divide-y divide-gray-100">
+                    <!-- Row 1 -->
+                    <div class="flex flex-col md:flex-row md:items-center px-6 py-6 md:px-10 hover:bg-gray-50 transition-colors">
+                        <div class="w-full md:w-3/5 mb-4 md:mb-0 pr-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                                <h4 class="font-bold text-[#021224] text-lg">Premium Business Website</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 pl-8 leading-relaxed">Five-page premium website, custom design, mobile-optimized and conversion-focused.</p>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right mb-2 md:mb-0 pr-4">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Regular Value:</span>
+                            <span class="text-gray-400 line-through font-medium">₦500,000</span>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Your Price:</span>
+                            <span class="font-bold text-white bg-green-500 px-3 py-1 rounded-md text-sm shadow-sm inline-block uppercase tracking-wider">FREE</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="flex flex-col md:flex-row md:items-center px-6 py-6 md:px-10 hover:bg-gray-50 transition-colors">
+                        <div class="w-full md:w-3/5 mb-4 md:mb-0 pr-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                                <h4 class="font-bold text-[#021224] text-lg">Secure Hosting & Tech Updates</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 pl-8 leading-relaxed">Enterprise-grade security, automated backups, and proactive technical updates.</p>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right mb-2 md:mb-0 pr-4">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Regular Value:</span>
+                            <span class="text-gray-400 line-through font-medium">₦500,000/yr</span>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Your Price:</span>
+                            <span class="font-bold text-[#021224]">Included</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="flex flex-col md:flex-row md:items-center px-6 py-6 md:px-10 hover:bg-gray-50 transition-colors">
+                        <div class="w-full md:w-3/5 mb-4 md:mb-0 pr-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                                <h4 class="font-bold text-[#021224] text-lg">Booking & Reservation Engine</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 pl-8 leading-relaxed">Seamless e-bookings, calendar syncing, and reservation infrastructure for your services.</p>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right mb-2 md:mb-0 pr-4">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Regular Value:</span>
+                            <span class="text-gray-400 line-through font-medium">₦450,000/yr</span>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Your Price:</span>
+                            <span class="font-bold text-[#021224]">Included</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="flex flex-col md:flex-row md:items-center px-6 py-6 md:px-10 hover:bg-gray-50 transition-colors">
+                        <div class="w-full md:w-3/5 mb-4 md:mb-0 pr-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                                <h4 class="font-bold text-[#021224] text-lg">CRM & Lead Capture</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 pl-8 leading-relaxed">Capture leads from socials and WhatsApp. Have all your customers centralized in one place.</p>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right mb-2 md:mb-0 pr-4">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Regular Value:</span>
+                            <span class="text-gray-400 line-through font-medium">₦1,100,000/yr</span>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Your Price:</span>
+                            <span class="font-bold text-[#021224]">Included</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 5 -->
+                    <div class="flex flex-col md:flex-row md:items-center px-6 py-6 md:px-10 hover:bg-gray-50 transition-colors">
+                        <div class="w-full md:w-3/5 mb-4 md:mb-0 pr-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                                <h4 class="font-bold text-[#021224] text-lg">Automated Follow-up System</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 pl-8 leading-relaxed">Email automation and WhatsApp message automation to close deals without manual work.</p>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right mb-2 md:mb-0 pr-4">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Regular Value:</span>
+                            <span class="text-gray-400 line-through font-medium">₦600,000/yr</span>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Your Price:</span>
+                            <span class="font-bold text-[#021224]">Included</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 6 -->
+                    <div class="flex flex-col md:flex-row md:items-center px-6 py-6 md:px-10 hover:bg-gray-50 transition-colors">
+                        <div class="w-full md:w-3/5 mb-4 md:mb-0 pr-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                                <h4 class="font-bold text-[#021224] text-lg">Customer Loyalty Engine</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 pl-8 leading-relaxed">Push notifications, geo-triggers, and rewards to bring customers back without spending an extra dime.</p>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right mb-2 md:mb-0 pr-4">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Regular Value:</span>
+                            <span class="text-gray-400 line-through font-medium">₦800,000/yr</span>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Your Price:</span>
+                            <span class="font-bold text-[#021224]">Included</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 7 -->
+                    <div class="flex flex-col md:flex-row md:items-center px-6 py-6 md:px-10 hover:bg-gray-50 transition-colors">
+                        <div class="w-full md:w-3/5 mb-4 md:mb-0 pr-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                                <h4 class="font-bold text-[#021224] text-lg">Analytics & Tracking</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 pl-8 leading-relaxed">Google Tag Manager, Conversion Tracking, GA4, and Data Studio connected to your site.</p>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right mb-2 md:mb-0 pr-4">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Regular Value:</span>
+                            <span class="text-gray-400 line-through font-medium">₦650,000/yr</span>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Your Price:</span>
+                            <span class="font-bold text-[#021224]">Included</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 8 -->
+                    <div class="flex flex-col md:flex-row md:items-center px-6 py-6 md:px-10 hover:bg-gray-50 transition-colors">
+                        <div class="w-full md:w-3/5 mb-4 md:mb-0 pr-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                                <h4 class="font-bold text-[#021224] text-lg">Technical SEO Foundation</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 pl-8 leading-relaxed">Preparing your website's foundation for AI SEO, AEO, GEO, and traditional search dominance.</p>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right mb-2 md:mb-0 pr-4">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Regular Value:</span>
+                            <span class="text-gray-400 line-through font-medium">₦800,000/yr</span>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Your Price:</span>
+                            <span class="font-bold text-[#021224]">Included</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 9 -->
+                    <div class="flex flex-col md:flex-row md:items-center px-6 py-6 md:px-10 hover:bg-gray-50 transition-colors">
+                        <div class="w-full md:w-3/5 mb-4 md:mb-0 pr-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <i class="ph-fill ph-check-circle text-green-500 text-xl"></i>
+                                <h4 class="font-bold text-[#021224] text-lg">AI-Powered Business Tools</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 pl-8 leading-relaxed">AI social media scheduler, content generators, and smart business automation tools.</p>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right mb-2 md:mb-0 pr-4">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Regular Value:</span>
+                            <span class="text-gray-400 line-through font-medium">₦1,000,000/yr</span>
+                        </div>
+                        <div class="w-full md:w-1/5 flex justify-between md:block text-left md:text-right">
+                            <span class="md:hidden text-xs font-bold text-gray-400 uppercase tracking-widest">Your Price:</span>
+                            <span class="font-bold text-[#021224]">Included</span>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Grand Total Section -->
+                <div class="bg-blue-50 border-t-2 border-blue-200 p-8 md:p-10 text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-blue-400 opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-300 opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+                    
+                    <div class="relative z-10 flex flex-col items-center">
+                        <p class="text-gray-500 font-medium mb-1">Total Real-World Value</p>
+                        <p class="text-xl md:text-2xl text-gray-400 line-through font-bold font-heading mb-6">Over ₦6,400,000 / year</p>
+                        
+                        <div class="bg-white px-8 py-5 rounded-2xl shadow-sm border border-gray-100 mb-6 inline-block">
+                            <p class="text-[#0095ff] font-bold text-sm uppercase tracking-widest mb-1">Get everything for just</p>
+                            <p class="text-4xl md:text-[3.5rem] font-bold font-heading text-[#021224] leading-none mb-1">₦890,000 <span class="text-xl text-gray-400 font-medium">/ year</span></p>
+                        </div>
+                        
+                        <p class="text-xl md:text-2xl text-gray-800 font-bold mb-8">
+                            And we throw in the <span class="text-[#ff4d4d]">₦500K website for FREE.</span>
+                        </p>
+                        
+                        <a href="#sales" class="inline-flex items-center justify-center bg-[#021224] text-white px-10 py-4 rounded-full font-heading font-semibold text-lg gap-2 shadow-[0_8px_20px_rgba(2,18,36,0.3)] hover:-translate-y-1 transition duration-300 w-full sm:w-auto">
+                            Secure Your Offer Now
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: AUTHORITY & STATS -->
+    <section class="py-12 md:py-16 px-6 bg-[#021224] relative overflow-hidden border-t border-[#0095ff]/10 text-center">
+        <!-- Background accents -->
+        <div class="absolute top-0 right-1/2 translate-x-1/2 w-[800px] h-[300px] bg-[#0095ff] opacity-[0.03] rounded-full blur-[80px] pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10 flex flex-col items-center">
+            
+            <!-- Headline -->
+            <h2 class="text-[2.5rem] md:text-[2.75rem] font-bold font-heading text-white leading-[1.05] mb-10 tracking-tight">
+                We’re Not New to This. <span class="text-[#0095ff]">We’ve Been Winning for 8 Years.</span>
+            </h2>
+            
+            <!-- Stats Row (6 cols on desktop) -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 mb-10 w-full bg-white/5 border border-white/10 p-6 md:p-8 rounded-[24px] backdrop-blur-sm">
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold font-heading text-white mb-1"><span class="counter" data-target="228">0</span><span class="text-[#0095ff]">+</span></div>
+                    <div class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest font-semibold leading-tight">Active Clients</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold font-heading text-white mb-1"><span class="counter" data-target="1000">0</span><span class="text-[#0095ff]">+</span></div>
+                    <div class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest font-semibold leading-tight">Projects Delivered</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold font-heading text-white mb-1">24/7</div>
+                    <div class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest font-semibold leading-tight">AI Infrastructure</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold font-heading text-white mb-1"><span class="counter" data-target="6">0</span><span class="text-[#0095ff]">+</span></div>
+                    <div class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest font-semibold leading-tight">Hosting Platforms</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold font-heading text-white mb-1"><span class="counter" data-target="8">0</span><span class="text-[#0095ff]">+</span></div>
+                    <div class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest font-semibold leading-tight">Years Experience</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-bold font-heading text-white mb-1"><span class="counter" data-target="20">0</span><span class="text-[#0095ff]">+</span></div>
+                    <div class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest font-semibold leading-tight">Partners</div>
+                </div>
+            </div>
+            
+            <!-- CTA -->
+            <a href="#sales" class="inline-flex items-center justify-center bg-[#0095ff] text-white hover:bg-blue-600 px-10 py-3.5 rounded-full font-heading font-semibold text-lg gap-2 shadow-[0_8px_20px_rgba(0,149,255,0.3)] hover:-translate-y-1 transition duration-300 mb-10">
+                Get Started
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            
+            <!-- Logos -->
+            <div class="flex flex-col items-center">
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-4">Trusted by businesses across industries</p>
+                <div class="flex flex-wrap items-center justify-center gap-4 md:gap-5">
+                    <div class="bg-white rounded-xl px-4 py-2 md:px-5 md:py-3 flex items-center justify-center shadow-sm opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="assets/logos/samsung.png" alt="Samsung" class="h-6 md:h-8 object-contain">
+                    </div>
+                    <div class="bg-white rounded-xl px-4 py-2 md:px-5 md:py-3 flex items-center justify-center shadow-sm opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="assets/logos/dominos.png" alt="Domino's" class="h-6 md:h-8 object-contain">
+                    </div>
+                    <div class="bg-white rounded-xl px-4 py-2 md:px-5 md:py-3 flex items-center justify-center shadow-sm opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="assets/logos/haagendazs.png" alt="Haagen-Dazs" class="h-7 md:h-9 object-contain">
+                    </div>
+                    <div class="bg-white rounded-xl px-4 py-2 md:px-5 md:py-3 flex items-center justify-center shadow-sm opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="assets/logos/servus.png" alt="Servus" class="h-7 md:h-9 object-contain">
+                    </div>
+                    <div class="bg-white rounded-xl px-4 py-2 md:px-5 md:py-3 flex items-center justify-center shadow-sm opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="assets/logos/pharmtech.png" alt="Pharmtech" class="h-6 md:h-8 object-contain">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Counter Animation Script -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const counters = document.querySelectorAll('.counter');
+                
+                const animateCounters = (entries, observer) => {
+                    entries.forEach(entry => {
+                        if(entry.isIntersecting) {
+                            const counter = entry.target;
+                            const target = +counter.getAttribute('data-target');
+                            const duration = 2000;
+                            const interval = 20;
+                            const steps = duration / interval;
+                            const increment = target / steps;
+                            
+                            let current = 0;
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if(current >= target) {
+                                    counter.innerText = target;
+                                    clearInterval(timer);
+                                } else {
+                                    counter.innerText = Math.ceil(current);
+                                }
+                            }, interval);
+                            
+                            observer.unobserve(counter);
+                        }
+                    });
+                };
+                
+                const observer = new IntersectionObserver(animateCounters, { threshold: 0.3 });
+                counters.forEach(counter => {
+                    observer.observe(counter);
+                });
+            });
+        </script>
+    </section>
+
+    <!-- SECTION 7: WHY THIS IS DIFFERENT -->
+    <section class="py-24 px-6 bg-white border-b border-gray-100">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-[2.25rem] md:text-4xl lg:text-5xl font-bold font-heading text-gray-900 leading-[1.05] mb-12 lg:mb-16 tracking-tight">
+                Your Website Should Be Part of a System <br class="hidden md:block"/><span class="text-[#0095ff]">That Makes You Money.</span>
+            </h2>
+            
+            <!-- Customer Journey Visual -->
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6 mb-16">
+                
+                <!-- 1: Visitor -->
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-500 mb-3 shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-transform hover:scale-110">
+                        <i class="ph ph-user text-2xl"></i>
+                    </div>
+                    <span class="font-heading font-semibold text-sm uppercase tracking-wide text-gray-600">Visitor</span>
+                </div>
+                
+                <i class="ph-bold ph-caret-down lg:ph-caret-right text-gray-300 text-2xl rotate-0 lg:rotate-0 my-2 lg:my-0"></i>
+                
+                <!-- 2: Lead -->
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full bg-blue-50 border border-[#0095ff]/20 flex items-center justify-center text-[#0095ff] mb-3 shadow-[0_2px_10px_rgba(0,149,255,0.1)] transition-transform hover:scale-110">
+                        <i class="ph ph-funnel text-2xl"></i>
+                    </div>
+                    <span class="font-heading font-bold text-sm uppercase tracking-wide text-[#0095ff]">Lead</span>
+                </div>
+                
+                <i class="ph-bold ph-caret-down lg:ph-caret-right text-gray-300 text-2xl rotate-0 lg:rotate-0 my-2 lg:my-0"></i>
+                
+                <!-- 3: Follow-Up -->
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 mb-3 shadow-[0_2px_10px_rgba(79,70,229,0.1)] transition-transform hover:scale-110">
+                        <i class="ph ph-paper-plane-tilt text-2xl"></i>
+                    </div>
+                    <span class="font-heading font-bold text-sm uppercase tracking-wide text-indigo-600">Follow-Up</span>
+                </div>
+
+                <i class="ph-bold ph-caret-down lg:ph-caret-right text-gray-300 text-2xl rotate-0 lg:rotate-0 my-2 lg:my-0"></i>
+                
+                <!-- 4: Customer -->
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-600 mb-3 shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-transform hover:scale-110">
+                        <i class="ph ph-shopping-bag text-2xl"></i>
+                    </div>
+                    <span class="font-heading font-semibold text-sm uppercase tracking-wide text-gray-600">Customer</span>
+                </div>
+
+                <i class="ph-bold ph-caret-down lg:ph-caret-right text-gray-300 text-2xl rotate-0 lg:rotate-0 my-2 lg:my-0"></i>
+                
+                <!-- 5: Repeat Customer -->
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full bg-green-50 border border-green-200 flex items-center justify-center text-green-600 mb-3 shadow-[0_2px_10px_rgba(22,163,74,0.1)] transition-transform hover:scale-110">
+                        <i class="ph-fill ph-check-circle text-2xl"></i>
+                    </div>
+                    <span class="font-heading font-bold text-sm uppercase tracking-wide text-green-600">Repeat Customer</span>
+                </div>
+
+            </div>
+
+            <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">
+                We connect the tools behind the website so you can capture more opportunities, follow up faster and keep customers coming back.
+            </p>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-12 md:py-16 px-6 bg-[#021224] relative overflow-hidden">
+        <!-- Abstract bg shapes -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-[#0095ff] rounded-full blur-[120px] opacity-10"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-blue-900 rounded-full blur-[120px] opacity-20"></div>
+        
+        <div class="max-w-3xl mx-auto text-center relative z-10">
+            <h2 class="text-[2.5rem] md:text-4xl lg:text-5xl font-bold font-heading text-white leading-[1.05] mb-6 tracking-tight">
+                Claim your 48-hour offer.
+            </h2>
+            
+            <div class="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 max-w-2xl mx-auto shadow-2xl relative overflow-hidden">
+                
+                <!-- Pricing Focus -->
+                <div class="mb-6 relative z-10">
+                    <p class="text-slate-500 text-xl md:text-2xl font-bold font-heading line-through decoration-red-500/80 decoration-2 mb-1">
+                        ₦6,400,000
+                    </p>
+                    <p class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+                        ₦890,000 <span class="text-xl text-slate-400 font-medium tracking-normal">for one year</span>
+                    </p>
+                    <p class="text-lg md:text-xl font-semibold text-slate-300 mb-1">
+                        Get the full business growth tools,
+                    </p>
+                    <p class="text-lg md:text-xl font-semibold text-slate-300">
+                        and we'll give you a <span class="text-red-500 font-bold">website worth ₦500,000 FREE!</span>
+                    </p>
+                </div>
+                
+                <!-- IFRAME PLACEHOLDER -->
+                <div class="w-full bg-black/30 border border-dashed border-[#0095ff]/40 rounded-xl p-6 my-6 flex flex-col items-center justify-center min-h-[120px] relative z-10">
+                    <p class="text-[#0095ff] font-mono text-xs mb-1">&lt;!-- Paste Iframe Form Code Here --&gt;</p>
+                </div>
+                
+                <div class="relative z-10">
+                    <a href="#sales" class="bg-[#0095ff] text-white hover:bg-blue-600 px-10 py-3 rounded-full font-heading font-bold text-lg inline-flex items-center justify-center w-full sm:w-auto shadow-[0_10px_30px_rgba(0,149,255,0.3)] hover:-translate-y-1 transition duration-300">
+                        Get Started Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#010a14] py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            <div>
+                <div class="h-10 w-40 overflow-visible relative mx-auto md:mx-0 mb-4">
+                <img src="assets/bluerock-logo.png" alt="BlueRock Technologies" class="absolute left-1/2 md:left-0 top-1/2 transform -translate-x-1/2 md:translate-x-0 -translate-y-1/2 scale-[1.7] sm:scale-[2] origin-center md:origin-left filter brightness-0 invert opacity-90">
+            </div>
+                <p class="text-slate-500 text-sm font-medium">The AI-Powered Growth Agency for Modern Businesses.</p>
+            </div>
+            <p class="text-slate-500 text-sm font-medium">
+                &copy; 2026 BlueRock Technologies. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
