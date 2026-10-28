@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KHCBJQL2');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking & Appointment Growth System for Nigerian Businesses | BlueRock</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Turn every inquiry into a confirmed booking 24/7. Built for clinics, medspas, salons, boutique hotels, shortlets, and studios in Nigeria.">
+    <link rel="canonical" href="https://www.bluerocktechnologies.net/sme/booking">
+    <link rel="icon" type="image/png" href="/sme/assets/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bluerocktechnologies.net/sme/booking">
+    <meta property="og:title" content="Booking & Appointment Growth System for Nigerian Businesses | BlueRock">
+    <meta property="og:description" content="Turn every inquiry into a confirmed booking 24/7. Built for clinics, medspas, salons, boutique hotels, shortlets, and studios in Nigeria.">
+    <meta property="og:image" content="https://www.bluerocktechnologies.net/sme/assets/ghl-hero-mockup.png">
+
+    <!-- Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        podium: {
+                            blue: '#0066ff',
+                            blueDark: '#0052cc',
+                            navy: '#090d16',
+                            slate: '#0f172a',
+                            subtle: '#f8fafc',
+                            border: '#e2e8f0',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'podium-card': '0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02)',
+                        'podium-hover': '0 20px 35px -4px rgba(15, 23, 42, 0.08), 0 8px 16px -2px rgba(15, 23, 42, 0.04)',
+                        'glow-blue': '0 0 50px -5px rgba(0, 102, 255, 0.25)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+            background-color: #ffffff;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #0f172a;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+            position: relative;
+            background-color: #ffffff;
+            -webkit-overflow-scrolling: touch;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.03em;
+        }
+
+        @media (max-width: 1024px) {
+            [data-aos] {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+                visibility: visible !important;
+            }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 selection:bg-blue-600 selection:text-white">
+<div class="overflow-x-hidden w-full relative">
+
+    <!-- TOP PROMO BANNER (PODIUM STYLE) -->
+    <aside aria-label="Announcement" class="bg-[#090d16] text-white py-2.5 px-4 text-center text-xs sm:text-sm font-medium relative z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
+            <span class="inline-flex items-center gap-1.5 bg-blue-500/20 text-blue-400 border border-blue-400/30 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider">
+                Limited Allocation
+            </span>
+            <span>Get the Full BlueRock SME Growth System + a <strong>Website worth ₦500,000 FREE!</strong></span>
+            <a href="#claim-offer" class="text-blue-400 font-bold hover:text-white underline underline-offset-4 transition-colors">Claim in 48 Hours &rarr;</a>
+        </div>
+    </aside>
+
+    <!-- CLEAN SAAS NAVIGATION (PODIUM BENCHMARK) -->
+    <nav class="sticky top-0 left-0 w-full z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="/sme" class="flex items-center gap-3 group">
+                <div class="h-10 w-44 overflow-visible relative flex items-center">
+                    <img src="/sme/assets/bluerock-logo.png" alt="BlueRock Technologies" class="h-9 sm:h-10 w-auto object-contain">
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                
+                <!-- See How It Works For Your Industry Dropdown -->
+                <div class="relative group" id="industry-nav-dropdown">
+                    <button class="flex items-center gap-1.5 py-2 hover:text-blue-600 transition-colors focus:outline-none">
+                        <span>See How It Works For Your Industry</span>
+                        <i class="ph-bold ph-caret-down text-xs transition-transform duration-200 group-hover:rotate-180"></i>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute left-0 top-full pt-2 w-84 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="bg-white rounded-2xl p-3 shadow-xl border border-slate-200/90 text-left">
+                            <a href="/sme/booking" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item bg-blue-50/80">
+                                <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-lg shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
+                                    <i class="ph-bold ph-calendar-check"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-slate-900 text-xs">Booking-Based Businesses</div>
+                                    <div class="text-[11px] text-slate-500 font-normal">Clinics, Spas, Salons, Hotels, Shortlets</div>
+                                </div>
+                            </a>
+                            <a href="/sme/retail" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item ">
+                                <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg shrink-0 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-colors">
+                                    <i class="ph-bold ph-storefront"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-slate-900 text-xs">Retail &amp; E-Commerce Stores</div>
+                                    <div class="text-[11px] text-slate-500 font-normal">Boutiques, Supermarkets, Fashion, D2C</div>
+                                </div>
+                            </a>
+                            <a href="/sme/automotive" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item ">
+                                <div class="w-9 h-9 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-lg shrink-0 group-hover/item:bg-amber-600 group-hover/item:text-white transition-colors">
+                                    <i class="ph-bold ph-car"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-slate-900 text-xs">Automotive &amp; Dealerships</div>
+                                    <div class="text-[11px] text-slate-500 font-normal">Car Dealerships, Garages, Heavy Parts</div>
+                                </div>
+                            </a>
+                            <a href="/sme/b2b" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item ">
+                                <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg shrink-0 group-hover/item:bg-indigo-600 group-hover/item:text-white transition-colors">
+                                    <i class="ph-bold ph-briefcase"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-slate-900 text-xs">Professional B2B Services</div>
+                                    <div class="text-[11px] text-slate-500 font-normal">Law, Accounting, Real Estate, Consulting</div>
+                                </div>
+                            </a>
+                            <a href="/sme/subscriptions" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item ">
+                                <div class="w-9 h-9 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center text-lg shrink-0 group-hover/item:bg-purple-600 group-hover/item:text-white transition-colors">
+                                    <i class="ph-bold ph-barbell"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-slate-900 text-xs">Memberships &amp; Subscriptions</div>
+                                    <div class="text-[11px] text-slate-500 font-normal">Gyms, Fitness, Co-working Spaces, Clubs</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#roi-calculator" class="hover:text-blue-600 transition-colors flex items-center gap-1.5">
+                    <span>ROI Calculator</span>
+                </a>
+                <a href="#pricing" class="hover:text-blue-600 transition-colors">Pricing</a>
+            </div>
+
+            <!-- Right CTA Button & Phone -->
+            <div class="flex items-center gap-4">
+                <a href="tel:+2349114399999" class="hidden xl:flex items-center gap-2 text-xs font-semibold text-slate-600 hover:text-blue-600 transition-colors">
+                    <i class="ph-bold ph-phone-call text-blue-600 text-sm"></i>
+                    <span>+234 911 439 9999</span>
+                </a>
+                <a href="#book-consultation" class="bg-[#0066ff] hover:bg-[#0052cc] text-white px-5 sm:px-6 py-2.5 rounded-full font-heading font-bold text-xs sm:text-sm shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2">
+                    <span>Get Started</span>
+                    <i class="ph-bold ph-arrow-right text-xs"></i>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileNav()" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="ph-bold ph-list text-2xl" id="mobile-menu-icon"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile Nav Menu (Toggleable) -->
+        <div id="mobile-nav-panel" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 py-5 space-y-3 shadow-xl">
+            <div class="font-bold text-[11px] uppercase tracking-wider text-slate-400">Industries</div>
+            <div class="grid gap-1.5">
+                <a href="/sme/booking" class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 text-slate-800 text-sm font-semibold bg-blue-50 text-blue-700">
+                    <i class="ph-bold ph-calendar-check text-blue-600 text-lg"></i>
+                    <span>Booking-Based Businesses</span>
+                </a>
+                <a href="/sme/retail" class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 text-slate-800 text-sm font-semibold ">
+                    <i class="ph-bold ph-storefront text-emerald-600 text-lg"></i>
+                    <span>Retail &amp; E-Commerce Stores</span>
+                </a>
+                <a href="/sme/automotive" class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 text-slate-800 text-sm font-semibold ">
+                    <i class="ph-bold ph-car text-amber-600 text-lg"></i>
+                    <span>Automotive &amp; Dealerships</span>
+                </a>
+                <a href="/sme/b2b" class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 text-slate-800 text-sm font-semibold ">
+                    <i class="ph-bold ph-briefcase text-indigo-600 text-lg"></i>
+                    <span>Professional B2B Services</span>
+                </a>
+                <a href="/sme/subscriptions" class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 text-slate-800 text-sm font-semibold ">
+                    <i class="ph-bold ph-barbell text-purple-600 text-lg"></i>
+                    <span>Memberships &amp; Subscriptions</span>
+                </a>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2.5">
+                <a href="#roi-calculator" onclick="toggleMobileNav()" class="text-sm font-semibold text-slate-700 hover:text-blue-600">ROI Calculator</a>
+                <a href="#pricing" onclick="toggleMobileNav()" class="text-sm font-semibold text-slate-700 hover:text-blue-600">Pricing</a>
+                <a href="tel:+2349114399999" class="text-sm font-semibold text-slate-700 hover:text-blue-600 flex items-center gap-2">
+                    <i class="ph-bold ph-phone-call text-blue-600"></i>
+                    <span>+234 911 439 9999</span>
+                </a>
+                <a href="#book-consultation" onclick="toggleMobileNav()" class="w-full text-center py-3 bg-[#0066ff] text-white font-bold rounded-full text-sm">
+                    Get Started &rarr;
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-gradient-to-b from-slate-50/70 via-white to-white pt-10 pb-16 lg:pt-14 lg:pb-24 border-b border-slate-200/60 overflow-hidden">
+        <div class="absolute top-0 right-1/4 w-[600px] h-[400px] bg-blue-100/50 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <div class="lg:col-span-6 text-center lg:text-left" data-aos="fade-up" data-aos-duration="700">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-600 text-xs font-bold uppercase tracking-wider mb-5">
+                        <i class="ph-bold ph-calendar-check text-blue-600"></i>
+                        <span>THE #1 BOOKING SYSTEM FOR APPOINTMENT BUSINESSES</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.65rem] font-extrabold font-heading text-slate-900 leading-[1.08] tracking-tight mb-5">
+                        Fill Every Empty Slot &amp; <br class="hidden sm:inline"/> 
+                        <span class="text-[#0066ff]">Stop Lost Inquiries.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8 font-normal">
+                        The BlueRock Booking System captures every client inquiry 24/7 on WhatsApp and website chat, qualifies their appointment request, checks staff or room availability, and confirms the booking on your calendar—completely on autopilot.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3.5 mb-8">
+                        <a href="#book-consultation" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#0066ff] hover:bg-[#0052cc] text-white font-heading font-bold text-base shadow-[0_4px_16px_rgba(0,102,255,0.3)] hover:shadow-[0_8px_25px_rgba(0,102,255,0.4)] hover:-translate-y-0.5 transition-all duration-300 group">
+                            <span>Get Started for Your Business</span>
+                            <i class="ph-bold ph-arrow-right text-base group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#types-of-businesses" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-900 border border-slate-300 font-heading font-semibold text-base shadow-sm transition-all duration-300">
+                            <span>See Supported Businesses</span>
+                            <i class="ph-bold ph-caret-down text-sm text-slate-500"></i>
+                        </a>
+                    </div>
+
+                    <div class="pt-6 border-t border-slate-200/80 text-xs text-slate-500 font-medium">
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-x-2.5 gap-y-1.5">
+                            <span class="text-slate-800 font-semibold">24/7 Automated Booking</span>
+                            <span class="text-slate-300">•</span>
+                            <span class="text-slate-800 font-semibold">Sub-45s Speed to Lead</span>
+                            <span class="text-slate-300">•</span>
+                            <span class="text-slate-800 font-semibold">Doctor &amp; Stylist Calendar Sync</span>
+                            <span class="text-slate-300">•</span>
+                            <span class="text-slate-800 font-semibold">Automated SMS Reminders</span>
+                            <span class="text-slate-300">•</span>
+                            <span class="text-slate-800 font-semibold">70% Fewer No-Shows</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 relative flex items-center justify-center" data-aos="fade-up" data-aos-duration="900">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-blue-500/10 to-indigo-500/10 rounded-3xl blur-2xl -z-10"></div>
+                    <div class="relative w-full max-w-xl lg:max-w-none flex justify-center group">
+                        <img src="/sme/assets/ghl-hero-mockup.png" alt="BlueRock Booking System" class="w-full h-auto object-contain max-h-[500px] drop-shadow-[0_20px_40px_rgba(15,23,42,0.18)]" loading="eager" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- PROOF LOGOS -->
+    <section class="py-10 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-xs font-bold uppercase tracking-wider text-slate-500 mb-6 font-heading">
+                Powering Leading Clinics, Spas, Salons &amp; Hospitality Brands in Nigeria
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-6 items-center justify-center opacity-80">
+                <div class="flex items-center justify-center h-10 p-2"><img src="/sme/assets/logos/samsung.png" alt="Samsung" class="max-h-6 w-auto object-contain"></div>
+                <div class="flex items-center justify-center h-10 p-2"><img src="/sme/assets/logos/dominos.png" alt="Domino's" class="max-h-6 w-auto object-contain"></div>
+                <div class="flex items-center justify-center h-10 p-2"><img src="/sme/assets/logos/hadco-logo.png" alt="Hadco" class="max-h-6 w-auto object-contain"></div>
+                <div class="flex items-center justify-center h-10 p-2"><img src="/sme/assets/logos/starlite-logo.png" alt="Starlite" class="max-h-5 w-auto object-contain"></div>
+                <div class="flex items-center justify-center h-10 p-2"><img src="/sme/assets/logos/servus.png" alt="Servus" class="max-h-6 w-auto object-contain"></div>
+                <div class="flex items-center justify-center h-10 p-2"><img src="/sme/assets/logos/haagendazs.png" alt="Haagen-Dazs" class="max-h-6 w-auto object-contain"></div>
+                <div class="flex items-center justify-center h-10 p-2"><img src="/sme/assets/logos/pharmtech.png" alt="Pharmtech" class="max-h-5 w-auto object-contain"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUILT FOR EVERY KIND OF BOOKING BUSINESS (EXPLICIT REQUESTED SECTION) -->
+    <section id="types-of-businesses" class="py-20 bg-[#f8fafc] border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+                <span class="text-xs font-bold text-blue-600 tracking-wider uppercase bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200/80">
+                    Dedicated Booking Solutions
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 mt-4 leading-tight">
+                    Built for Every Kind of Booking Business
+                </h2>
+                <p class="text-base sm:text-lg text-slate-600 mt-4">
+                    If your business depends on people reserving a time, a chair, a doctor, a room, or a venue, BlueRock gives you an aggressive booking engine designed to maximize calendar occupancy.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" data-aos="fade-up">
+                
+                <!-- 1. Medical & Dental Clinics -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-podium-card hover:shadow-podium-hover transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl mb-5">
+                        <i class="ph-bold ph-first-aid"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-slate-900 mb-2">Medical &amp; Dental Clinics</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Patients inquire late at night with treatment questions. BlueRock qualifies symptoms, checks doctor calendars, collects preliminary intake details, and secures consultations with zero phone tag.
+                    </p>
+                    <div class="text-xs text-blue-600 font-bold flex items-center gap-1.5">
+                        <i class="ph-bold ph-check"></i> 70% reduction in missed patient appointments
+                    </div>
+                </div>
+
+                <!-- 2. Aesthetic Clinics & Medspas -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-podium-card hover:shadow-podium-hover transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center text-2xl mb-5">
+                        <i class="ph-bold ph-sparkle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-slate-900 mb-2">Medspas &amp; Aesthetic Clinics</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        For Botox, chemical peels, body contouring, and laser care. Send procedure pricing, answer preparation FAQs, and collect deposit commitments directly on WhatsApp.
+                    </p>
+                    <div class="text-xs text-pink-600 font-bold flex items-center gap-1.5">
+                        <i class="ph-bold ph-check"></i> Automated pre-care instructions &amp; deposits
+                    </div>
+                </div>
+
+                <!-- 3. Hair Salons, Spas & Barbershops -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-podium-card hover:shadow-podium-hover transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mb-5">
+                        <i class="ph-bold ph-scissors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-slate-900 mb-2">Salons, Spas &amp; Wellness Centers</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Stop managing weekend chair rush on WhatsApp DMs. Clients choose their preferred stylist or masseuse, pick an open time slot, and receive automated 2-hour reminder alerts.
+                    </p>
+                    <div class="text-xs text-amber-600 font-bold flex items-center gap-1.5">
+                        <i class="ph-bold ph-check"></i> Rebooks clients every 3-4 weeks automatically
+                    </div>
+                </div>
+
+                <!-- 4. Boutique Hotels, Resorts & Luxury Shortlets -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-podium-card hover:shadow-podium-hover transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mb-5">
+                        <i class="ph-bold ph-bed"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-slate-900 mb-2">Hotels, Resorts &amp; Shortlets</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Eliminate third-party OTA commissions. Guests check real-time room availability, view video tours, confirm dates, and book direct stays without waiting for an attendant to reply.
+                    </p>
+                    <div class="text-xs text-emerald-600 font-bold flex items-center gap-1.5">
+                        <i class="ph-bold ph-check"></i> Instant direct booking with zero commission loss
+                    </div>
+                </div>
+
+                <!-- 5. Photography, Film & Creative Studios -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-podium-card hover:shadow-podium-hover transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl mb-5">
+                        <i class="ph-bold ph-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-slate-900 mb-2">Photography &amp; Creative Studios</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Rent out studio sets, equipment, and shoot sessions seamlessly. Manage time slots, session durations, lighting add-ons, and overtime buffers with zero double-booking.
+                    </p>
+                    <div class="text-xs text-purple-600 font-bold flex items-center gap-1.5">
+                        <i class="ph-bold ph-check"></i> Real-time set availability &amp; studio contract sign-off
+                    </div>
+                </div>
+
+                <!-- 6. Event Centers & Banquet Halls -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-podium-card hover:shadow-podium-hover transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl mb-5">
+                        <i class="ph-bold ph-buildings"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-slate-900 mb-2">Event Centers &amp; Venues</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Couples and corporate planners want wedding and conference hall dates fast. BlueRock verifies hall capacity, shares tiered pricing packages, and books physical site walkthroughs.
+                    </p>
+                    <div class="text-xs text-indigo-600 font-bold flex items-center gap-1.5">
+                        <i class="ph-bold ph-check"></i> Fast walkthrough bookings &amp; automated date holds
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BEFORE VS AFTER TABLE -->
+    <section class="py-20 bg-[#090d16] text-white border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+                <span class="text-xs font-bold text-blue-400 tracking-wider uppercase bg-blue-500/15 px-3.5 py-1.5 rounded-full border border-blue-400/30">
+                    The Booking Transformation
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white mt-4 leading-tight">
+                    From Empty Slots to a Fully Booked Calendar
+                </h2>
+                <p class="text-base text-slate-400 mt-4">
+                    See why 500+ Nigerian booking-driven businesses rely on BlueRock's automated appointment engine.
+                </p>
+            </div>
+
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8" data-aos="fade-up">
+                <div class="bg-[#101726] border border-red-500/20 rounded-3xl p-8 space-y-6">
+                    <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                        <h3 class="text-xl font-bold font-heading text-white">Manual Booking</h3>
+                        <span class="text-xs font-bold text-red-400 bg-red-500/10 px-2.5 py-1 rounded-full">Lost Revenue</span>
+                    </div>
+                    <div class="space-y-4 text-sm text-slate-300">
+                        <div><strong class="text-white block mb-0.5">Late-Night Inquiries:</strong> Go unanswered until next morning; client books a competitor.</div>
+                        <div><strong class="text-white block mb-0.5">Booking Method:</strong> 15 minutes of WhatsApp phone tag ("Are you free at 3? No, how about 5?").</div>
+                        <div><strong class="text-white block mb-0.5">No-Show Rate:</strong> Up to 35% empty chairs because nobody sends automated reminders.</div>
+                        <div><strong class="text-white block mb-0.5">Repeat Bookings:</strong> Dormant clients never hear from you again after their first visit.</div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-b from-[#0c2246] to-[#0a1b38] border-2 border-blue-500 rounded-3xl p-8 space-y-6 shadow-glow-blue">
+                    <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                        <h3 class="text-xl font-bold font-heading text-white">With BlueRock Booking Engine</h3>
+                        <span class="text-xs font-bold text-emerald-400 bg-emerald-500/15 px-2.5 py-1 rounded-full">100% Automated</span>
+                    </div>
+                    <div class="space-y-4 text-sm text-slate-200">
+                        <div><strong class="text-white block mb-0.5">Late-Night Inquiries:</strong> 38-second automated reply; client picks time slot immediately.</div>
+                        <div><strong class="text-white block mb-0.5">Booking Method:</strong> 1-click interactive calendar sync with doctor/stylist availability.</div>
+                        <div><strong class="text-white block mb-0.5">No-Show Rate:</strong> Slashed by 70% with automated 24h &amp; 2h WhatsApp reminders.</div>
+                        <div><strong class="text-white block mb-0.5">Repeat Bookings:</strong> Automated 4-week recall triggers and birthday perks bring them back.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE WORKFLOW DEMO PREVIEW -->
+    <section class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200/80">
+                    Live Booking Workflow
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 mt-4">
+                    How BlueRock Confirms Bookings While You Sleep
+                </h2>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-6 space-y-4 text-slate-700">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs">1</div>
+                        <p class="font-bold text-slate-900">Patient or client lands on your website at 10:45 PM.</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs">2</div>
+                        <p class="font-bold text-slate-900">BlueRock WhatsApp bot replies in 38 seconds with available slots.</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs">3</div>
+                        <p class="font-bold text-slate-900">Client picks 2:30 PM Saturday; calendar is immediately blocked.</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs">4</div>
+                        <p class="font-bold text-slate-900">Automated reminder sent Saturday morning; 84% show-up rate achieved.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 bg-white p-6 rounded-2xl border border-slate-200 shadow-md space-y-3 text-xs">
+                    <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+                        <span class="font-bold text-slate-800">WhatsApp Booking Session</span>
+                        <span class="text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded">Live Auto-Sync</span>
+                    </div>
+                    <div class="bg-slate-100 p-3 rounded-xl">
+                        <span class="text-[10px] text-slate-500 block">Client (10:45 PM)</span>
+                        <span class="font-semibold text-slate-800">"Hello, do you have any teeth whitening or aesthetic slots available this Saturday?"</span>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-xl border border-blue-100">
+                        <span class="text-[10px] text-blue-600 block font-bold">⚡ BlueRock Bot (10:45:32 PM)</span>
+                        <span class="text-blue-900">"Hello! We have 11:30 AM and 2:30 PM available with Dr. Adeleke this Saturday. Tap here to confirm your slot."</span>
+                    </div>
+                    <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-100 flex items-center gap-2 text-emerald-800 font-bold">
+                        <i class="ph-bold ph-check-circle text-base text-emerald-600"></i>
+                        <span>Confirmed: Saturday 2:30 PM • Calendar Synced • Reminder Scheduled</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDY -->
+    <section class="py-16 bg-[#f8fafc] border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="text-amber-400 text-sm mb-3">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <span class="text-xs font-bold text-slate-600 ml-2">Verified Lagos Practice</span>
+            </div>
+            <div class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 mb-4">
+                "Our show rate jumped to 84% and empty chairs are a thing of the past."
+            </div>
+            <p class="text-base text-slate-600 leading-relaxed mb-6">
+                "When patients inquire after hours, speed is everything. BlueRock responds before they can even look at another clinic in Victoria Island. In our first 90 days, we had +182% more booked treatments."
+            </p>
+            <div class="font-bold text-slate-900">Dr. Tunde Adeleke</div>
+            <div class="text-xs text-slate-500">Clinical Director, Lagos Dental &amp; Aesthetics, VI</div>
+        </div>
+    </section>
+
+    <!-- ROI CALCULATOR -->
+    <section id="roi-calculator" class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">Booking ROI Calculator</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 mt-3">Calculate Your Booking Revenue Lift</h2>
+            </div>
+            <div class="bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200 grid lg:grid-cols-12 gap-8 items-center shadow-podium-card">
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-sm font-bold text-slate-800">Monthly Inquiries / Calls:</label>
+                            <span id="leads-val-display" class="text-sm font-extrabold text-blue-600 bg-blue-50 px-3 py-1 rounded-lg">120 enquiries</span>
+                        </div>
+                        <input type="range" id="slider-leads" min="20" max="400" value="120" step="10" class="w-full h-2.5 bg-slate-200 rounded-lg cursor-pointer accent-blue-600" oninput="calculateROI()">
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-sm font-bold text-slate-800">Average Booking Value (₦):</label>
+                            <span id="deal-val-display" class="text-sm font-extrabold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-lg">₦45,000</span>
+                        </div>
+                        <input type="range" id="slider-deal" min="10000" max="300000" value="45000" step="5000" class="w-full h-2.5 bg-slate-200 rounded-lg cursor-pointer accent-emerald-500" oninput="calculateROI()">
+                    </div>
+                </div>
+                <div class="lg:col-span-5 bg-[#090d16] text-white rounded-2xl p-6 text-center">
+                    <div class="text-xs text-blue-400 font-bold uppercase mb-1">Estimated Annual Revenue Added</div>
+                    <div id="annual-roi-display" class="text-3xl font-black text-emerald-400 my-2">₦8,100,000</div>
+                    <div class="text-xs text-slate-300 mb-4">Extra revenue recovered from sub-45s WhatsApp booking &amp; reminder automation.</div>
+                    <a href="#book-consultation" class="block w-full py-3 bg-[#0066ff] hover:bg-[#0052cc] text-white font-bold text-xs rounded-full transition-all">Get Started &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PRICING & THE 48-HOUR LIMITED OFFER -->
+    <!-- ======================================================== -->
+    <section id="pricing" class="py-20 lg:py-28 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="max-w-3xl mx-auto text-center mb-14" data-aos="fade-up">
+                
+                <!-- Urgency Pill -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-bold uppercase tracking-wider mb-6">
+                    <i class="ph-bold ph-alarm text-base"></i>
+                    <span>Limited Launch Offer • 48-Hour Allocation</span>
+                </div>
+
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 leading-tight">
+                    Get the Complete Growth System &amp; Receive a <br class="hidden sm:inline"/>
+                    <span class="text-red-600 underline decoration-red-600/40">Website Worth ₦500,000 FREE!</span>
+                </h2>
+                <p class="text-base sm:text-lg text-slate-600 mt-4">
+                    One simple annual plan. No hidden fees. Full technical setup, CRM integration, WhatsApp automation, and staff onboarding handled for you.
+                </p>
+            </div>
+
+            <!-- Pricing Card Container -->
+            <div class="max-w-3xl mx-auto bg-slate-50 border-2 border-blue-600 rounded-3xl p-8 sm:p-12 shadow-podium-hover relative" data-aos="fade-up">
+                
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 pb-8 border-b border-slate-200">
+                    <div>
+                        <div class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
+                            All-in-One Annual Plan
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-bold font-heading text-slate-900">BlueRock Booking Growth System</h3>
+                        <p class="text-slate-600 text-sm mt-1">Professional Website + Sales CRM + WhatsApp &amp; Customer Loyalty Engine</p>
+                    </div>
+
+                    <div class="text-left sm:text-right">
+                        <div class="text-sm font-semibold text-slate-400 line-through decoration-red-500 decoration-2">
+                            Value: ₦6,400,000
+                        </div>
+                        <div class="text-4xl sm:text-5xl font-black font-heading text-slate-900 mt-1">
+                            ₦890,000 <span class="text-base text-slate-500 font-normal">/ 1 full year</span>
+                        </div>
+                        <div class="text-xs text-emerald-600 font-bold mt-1">
+                            ✓ Covers your entire business for 12 months
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Grid List -->
+                <div class="grid sm:grid-cols-2 gap-4 py-8 text-sm">
+                    <div class="space-y-3.5">
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="ph-bold ph-check text-emerald-500 text-base"></i>
+                            <span><strong>Custom 5-Page Website</strong> (Worth ₦500k Free)</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="ph-bold ph-check text-emerald-500 text-base"></i>
+                            <span>Sub-1.5s High Speed Mobile Hosting</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="ph-bold ph-check text-emerald-500 text-base"></i>
+                            <span>Google Local SEO &amp; Maps Setup</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="ph-bold ph-check text-emerald-500 text-base"></i>
+                            <span>Interactive Booking &amp; Lead Capture</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="ph-bold ph-check text-emerald-500 text-base"></i>
+                            <span>1-Click Direct WhatsApp Integration</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3.5">
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="ph-bold ph-check text-emerald-500 text-base"></i>
+                            <span><strong>Full Sales CRM System</strong> with Unlimited Leads</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="ph-bold ph-check text-emerald-500 text-base"></i>
+                            <span>Instant 45-Second Auto-Reply Automation</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="ph-bold ph-check text-emerald-500 text-base"></i>
+                            <span><strong>Customer Loyalty &amp; Rewards Engine</strong></span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="ph-bold ph-check text-emerald-500 text-base"></i>
+                            <span>Automated Google 5-Star Review Booster</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="ph-bold ph-check text-emerald-500 text-base"></i>
+                            <span>Dedicated Lagos Team Setup &amp; Staff Training</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing CTA Button -->
+                <div class="pt-6 border-t border-slate-200 text-center">
+                    <a href="#book-consultation" class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-4 bg-[#0066ff] hover:bg-[#0052cc] text-white font-heading font-extrabold text-base rounded-full shadow-[0_4px_16px_rgba(0,102,255,0.3)] hover:shadow-[0_8px_25px_rgba(0,102,255,0.4)] hover:-translate-y-0.5 transition-all">
+                        <span>Book Your Free Consultation to Claim This Offer &rarr;</span>
+                    </a>
+                    <p class="text-xs text-slate-500 mt-3 font-medium">
+                        Zero obligation • Live software demonstration • Live in 7 business days
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- CONSULTATION BOOKING SECTION -->
+    <!-- ======================================================== -->
+    <section id="book-consultation" class="py-20 lg:py-28 bg-[#090d16] text-white relative">
+        <span id="claim-offer" class="absolute -top-24"></span>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                <span class="text-xs font-bold text-blue-400 tracking-wider uppercase bg-blue-500/15 px-3.5 py-1.5 rounded-full border border-blue-400/30">
+                    Step 1: Select Your Time
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white mt-4 leading-tight">
+                    Ready to Stop Leaving Revenue on the Table?
+                </h2>
+                <p class="text-base sm:text-lg text-slate-300 mt-4">
+                    In this 20-minute strategic growth session, a BlueRock Growth Specialist will audit your current customer journey and show you the exact software setup tailored for Booking-Based Businesses.
+                </p>
+            </div>
+
+            <!-- What You'll Get Callout -->
+            <div class="grid sm:grid-cols-3 gap-4 mb-10 max-w-3xl mx-auto text-xs text-slate-300" data-aos="fade-up">
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+                    <i class="ph-bold ph-magnifying-glass text-blue-400 text-xl mb-1.5 block"></i>
+                    <strong class="text-white text-sm">1. Free Lead Flow Audit</strong>
+                    <p class="text-[11px] text-slate-400 mt-1">We inspect where your business is currently losing leads.</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+                    <i class="ph-bold ph-laptop text-emerald-400 text-xl mb-1.5 block"></i>
+                    <strong class="text-white text-sm">2. Live Platform Demo</strong>
+                    <p class="text-[11px] text-slate-400 mt-1">See the CRM, WhatsApp bot, &amp; loyalty engine live.</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+                    <i class="ph-bold ph-rocket-launch text-amber-400 text-xl mb-1.5 block"></i>
+                    <strong class="text-white text-sm">3. 7-Day Launch Plan</strong>
+                    <p class="text-[11px] text-slate-400 mt-1">Custom implementation plan built for your business.</p>
+                </div>
+            </div>
+
+            <!-- Embedded Booking Form with Skeleton Loading -->
+            <div class="relative w-full max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-white" style="min-height: 650px;">
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 z-0 p-6 text-center">
+                    <svg class="animate-spin h-10 w-10 text-blue-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <p class="text-sm font-semibold text-slate-700">Loading BlueRock Growth Calendar...</p>
+                    <p class="text-xs text-slate-400 mt-1">Please select an available date and time slot below.</p>
+                </div>
+                <iframe src="https://link.smbleadspro.com/widget/booking/YY3vuVWogD7lPs7nveIR" allow="payment" style="width: 100%; min-height: 650px; border:none; overflow: hidden;" scrolling="no" id="YY3vuVWogD7lPs7nveIR_1789487422414" class="relative z-10 bg-transparent transition-opacity duration-500 opacity-0" onload="this.style.opacity='1';"></iframe>
+                <script src="https://link.smbleadspro.com/js/form_embed.js" type="text/javascript"></script>
+            </div>
+
+            <!-- Direct WhatsApp Assistance Option -->
+            <div class="text-center mt-8">
+                <p class="text-xs sm:text-sm text-slate-400">
+                    Prefer to speak directly with an advisor on WhatsApp right now?
+                    <a href="https://wa.me/2349114399999?text=Hello%20BlueRock,%20I%20want%20to%20learn%20more%20about%20the%20SME%20Growth%20System%20for%20my%20business" target="_blank" class="text-emerald-400 font-bold hover:underline inline-flex items-center gap-1 ml-1">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp (+234 911 439 9999) &rarr;
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200">Booking FAQs</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 mt-3">Frequently Asked Questions</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full py-4 px-6 text-left font-bold text-slate-800 flex justify-between items-center bg-slate-50/50">
+                        <span>Can BlueRock connect to our existing Google Calendar or practice software?</span>
+                        <i id="faq-icon-1" class="ph-bold ph-plus text-blue-600"></i>
+                    </button>
+                    <div id="faq-answer-1" class="hidden px-6 pb-6 pt-2 text-slate-600 text-sm">
+                        Yes, 100%. We synchronize directly with Google Calendar, Outlook, and clinic scheduling systems so when a client books via WhatsApp or website, your staff calendars are instantly blocked.
+                    </div>
+                </div>
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full py-4 px-6 text-left font-bold text-slate-800 flex justify-between items-center bg-slate-50/50">
+                        <span>How does the system prevent double-booking for shared rooms or stylists?</span>
+                        <i id="faq-icon-2" class="ph-bold ph-plus text-blue-600"></i>
+                    </button>
+                    <div id="faq-answer-2" class="hidden px-6 pb-6 pt-2 text-slate-600 text-sm">
+                        BlueRock supports multi-provider and resource-based booking logic. If Room 2 or Dr. Funke is booked, that slot disappears from the client selector in real time.
+                    </div>
+                </div>
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full py-4 px-6 text-left font-bold text-slate-800 flex justify-between items-center bg-slate-50/50">
+                        <span>Can we collect booking deposits or consultation fees upfront?</span>
+                        <i id="faq-icon-3" class="ph-bold ph-plus text-blue-600"></i>
+                    </button>
+                    <div id="faq-answer-3" class="hidden px-6 pb-6 pt-2 text-slate-600 text-sm">
+                        Yes. You can require full payment, a flat deposit (e.g. ₦10,000), or allow clients to book with payment upon arrival.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- CLEAN SAAS FOOTER (PODIUM MODEL) -->
+    <!-- ======================================================== -->
+    <footer class="bg-white text-slate-600 py-14 px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-200">
+                
+                <!-- Col 1: Logo & Mission -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="h-9 w-44 overflow-visible relative flex items-center">
+                        <img src="/sme/assets/bluerock-logo.png" alt="BlueRock Technologies" class="h-8 w-auto object-contain">
+                    </div>
+                    <p class="text-sm text-slate-500 max-w-md leading-relaxed">
+                        BlueRock Technologies is the all-in-one business growth system powering modern Nigerian businesses. We combine high-converting websites, sales CRMs, and customer loyalty engines to turn more conversations into revenue.
+                    </p>
+                    <div class="text-xs text-slate-500 flex items-center gap-2 pt-1 font-medium">
+                        <i class="ph-bold ph-map-pin text-blue-600 text-sm"></i>
+                        <span>Lagos, Nigeria • Operating Across West Africa</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation Links -->
+                <div>
+                    <h4 class="text-slate-900 font-heading font-bold text-sm mb-4">Industries</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-600 font-medium">
+                        <li><a href="/sme/booking" class="hover:text-blue-600 transition-colors">Booking-Based Businesses</a></li>
+                        <li><a href="/sme/retail" class="hover:text-blue-600 transition-colors">Retail &amp; E-Commerce Stores</a></li>
+                        <li><a href="/sme/automotive" class="hover:text-blue-600 transition-colors">Automotive &amp; Dealerships</a></li>
+                        <li><a href="/sme/b2b" class="hover:text-blue-600 transition-colors">Professional B2B Services</a></li>
+                        <li><a href="/sme/subscriptions" class="hover:text-blue-600 transition-colors">Memberships &amp; Subscriptions</a></li>
+                        <li><a href="/sme" class="hover:text-blue-600 transition-colors">Overview Homepage</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Direct Contact -->
+                <div>
+                    <h4 class="text-slate-900 font-heading font-bold text-sm mb-4">Contact &amp; Support</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-600 font-medium">
+                        <li class="flex items-center gap-2">
+                            <i class="ph-bold ph-phone text-blue-600"></i>
+                            <a href="tel:+2349114399999" class="hover:text-blue-600 transition-colors">+234 911 439 9999</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="ph-bold ph-envelope text-blue-600"></i>
+                            <a href="mailto:hello@bluerocktechnologies.net" class="hover:text-blue-600 transition-colors">hello@bluerocktechnologies.net</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+                            <a href="https://wa.me/2349114399999" target="_blank" class="hover:text-blue-600 transition-colors">Direct WhatsApp Support</a>
+                        </li>
+                    </ul>
+                    <div class="flex items-center gap-3 mt-5">
+                        <a href="https://www.instagram.com/bluerocktechnologies/" target="_blank" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-blue-600 text-slate-600 hover:text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/bluerock-technologies" target="_blank" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-blue-600 text-slate-600 hover:text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4 font-medium">
+                <p>&copy; 2026 BlueRock Technologies. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="/sme" class="hover:text-slate-900 transition-colors">Privacy Policy</a>
+                    <a href="/sme" class="hover:text-slate-900 transition-colors">Terms of Service</a>
+                    <a href="/sme" class="hover:text-slate-900 transition-colors">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<!-- SCRIPT LIBRARIES & INTERACTIVITY -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        AOS.init({
+            duration: 600,
+            once: true,
+            offset: 20,
+            disable: function() {
+                return window.innerWidth < 1024;
+            },
+            easing: 'ease-out-cubic'
+        });
+        calculateROI();
+    });
+
+    function toggleMobileNav() {
+        const panel = document.getElementById('mobile-nav-panel');
+        const icon = document.getElementById('mobile-menu-icon');
+        if (panel.classList.contains('hidden')) {
+            panel.classList.remove('hidden');
+            icon.classList.remove('ph-list');
+            icon.classList.add('ph-x');
+        } else {
+            panel.classList.add('hidden');
+            icon.classList.remove('ph-x');
+            icon.classList.add('ph-list');
+        }
+    }
+
+    function toggleFaq(index) {
+        const answer = document.getElementById('faq-answer-' + index);
+        const icon = document.getElementById('faq-icon-' + index);
+        if (answer.classList.contains('hidden')) {
+            answer.classList.remove('hidden');
+            icon.classList.remove('ph-plus');
+            icon.classList.add('ph-minus');
+        } else {
+            answer.classList.add('hidden');
+            icon.classList.remove('ph-minus');
+            icon.classList.add('ph-plus');
+        }
+    }
+
+    function calculateROI() {
+        const leads = parseInt(document.getElementById('slider-leads').value);
+        const deal = parseInt(document.getElementById('slider-deal').value);
+
+        document.getElementById('leads-val-display').innerText = leads + ' enquiries';
+        document.getElementById('deal-val-display').innerText = '₦' + deal.toLocaleString();
+
+        const extraMonthlySales = Math.round(leads * 0.12 * deal * 1.25);
+        const extraAnnualSales = extraMonthlySales * 12;
+
+        document.getElementById('annual-roi-display').innerText = '₦' + extraAnnualSales.toLocaleString();
+        document.getElementById('monthly-roi-display').innerText = '₦' + extraMonthlySales.toLocaleString() + '/mo';
+    }
+</script>
+</body>
+</html>
