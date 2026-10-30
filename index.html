@@ -91,6 +91,56 @@
         [data-aos] {
             will-change: transform, opacity;
         }
+                /* Industry Switcher Tabs - Bulletproof Active/Inactive States */
+        .ind-tab-btn {
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            cursor: pointer;
+            outline: none !important;
+        }
+        .ind-tab-btn:focus,
+        .ind-tab-btn:focus-visible {
+            outline: none !important;
+        }
+        .ind-tab-btn.active,
+        .ind-tab-btn.active:focus,
+        .ind-tab-btn.active:hover,
+        .ind-tab-btn.active:active {
+            background-color: #090d16 !important;
+            color: #ffffff !important;
+            border-color: #090d16 !important;
+            box-shadow: 0 4px 14px -1px rgba(15, 23, 42, 0.3) !important;
+        }
+        .ind-tab-btn.active i,
+        .ind-tab-btn.active:focus i,
+        .ind-tab-btn.active:hover i,
+        .ind-tab-btn.active:active i {
+            color: #ffffff !important;
+        }
+        .ind-tab-btn:not(.active),
+        .ind-tab-btn:not(.active):focus,
+        .ind-tab-btn:not(.active):active {
+            background-color: #f1f5f9 !important;
+            color: #334155 !important;
+            border-color: #e2e8f0 !important;
+            box-shadow: none !important;
+        }
+        .ind-tab-btn:not(.active) i,
+        .ind-tab-btn:not(.active):focus i,
+        .ind-tab-btn:not(.active):active i {
+            color: #64748b !important;
+        }
+        @media (hover: hover) {
+            .ind-tab-btn:not(.active):hover {
+                background-color: #e2e8f0 !important;
+                color: #0f172a !important;
+                border-color: #cbd5e1 !important;
+            }
+            .ind-tab-btn:not(.active):hover i {
+                color: #0f172a !important;
+            }
+        }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f8fafc; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
@@ -322,63 +372,63 @@
             <div id="stats-counter-strip" data-aos="fade-up" data-aos-delay="150" class="mt-12 pt-10 border-t border-slate-100 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4 lg:gap-5 text-center">
                 
                 <!-- Metric 1 -->
-                <div class="flex flex-col items-center justify-center p-3.5 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 min-h-[115px] sm:min-h-[125px]">
-                    <div class="h-10 sm:h-12 flex items-center justify-center whitespace-nowrap mb-1">
+                <div class="flex flex-col items-center justify-center px-2 py-3.5 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 min-h-[110px] sm:min-h-[125px]">
+                    <div class="h-9 sm:h-12 flex items-center justify-center whitespace-nowrap mb-1">
                         <span class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 tracking-tight flex items-center">
                             <span class="counter-number" data-target="500">0</span>+
                         </span>
                     </div>
-                    <div class="text-xs sm:text-sm text-slate-600 font-semibold leading-tight">Businesses Powered</div>
+                    <div class="text-xs sm:text-sm text-slate-600 font-semibold leading-tight whitespace-nowrap">Businesses Powered</div>
                 </div>
 
-                <!-- Metric 2 (Protected single-line layout) -->
-                <div class="flex flex-col items-center justify-center p-3.5 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 min-h-[115px] sm:min-h-[125px]">
-                    <div class="h-10 sm:h-12 flex items-center justify-center whitespace-nowrap mb-1">
-                        <span class="text-2xl sm:text-3xl lg:text-3xl font-extrabold font-heading text-slate-900 tracking-tight whitespace-nowrap flex items-center gap-1">
-                            <span class="counter-number" data-target="8">0</span>+ Years
+                <!-- Metric 2 -->
+                <div class="flex flex-col items-center justify-center px-2 py-3.5 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 min-h-[110px] sm:min-h-[125px]">
+                    <div class="h-9 sm:h-12 flex items-center justify-center whitespace-nowrap mb-1">
+                        <span class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 tracking-tight flex items-center">
+                            <span class="counter-number" data-target="8">0</span>+
                         </span>
                     </div>
-                    <div class="text-xs sm:text-sm text-slate-600 font-semibold leading-tight">Industry Experience</div>
+                    <div class="text-xs sm:text-sm text-slate-600 font-semibold leading-tight whitespace-nowrap">Years Experience</div>
                 </div>
 
                 <!-- Metric 3 -->
-                <div class="flex flex-col items-center justify-center p-3.5 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 min-h-[115px] sm:min-h-[125px]">
-                    <div class="h-10 sm:h-12 flex items-center justify-center whitespace-nowrap mb-1">
+                <div class="flex flex-col items-center justify-center px-2 py-3.5 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 min-h-[110px] sm:min-h-[125px]">
+                    <div class="h-9 sm:h-12 flex items-center justify-center whitespace-nowrap mb-1">
                         <span class="text-3xl sm:text-4xl font-extrabold font-heading text-[#0066ff] tracking-tight whitespace-nowrap">
                             &lt;0.5s
                         </span>
                     </div>
-                    <div class="text-xs sm:text-sm text-slate-600 font-semibold leading-tight">Response Time</div>
+                    <div class="text-xs sm:text-sm text-slate-600 font-semibold leading-tight whitespace-nowrap">Response Time</div>
                 </div>
 
                 <!-- Metric 4 -->
-                <div class="flex flex-col items-center justify-center p-3.5 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 min-h-[115px] sm:min-h-[125px]">
-                    <div class="h-10 sm:h-12 flex items-center justify-center whitespace-nowrap mb-1">
+                <div class="flex flex-col items-center justify-center px-2 py-3.5 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 min-h-[110px] sm:min-h-[125px]">
+                    <div class="h-9 sm:h-12 flex items-center justify-center whitespace-nowrap mb-1">
                         <span class="text-3xl sm:text-4xl font-extrabold font-heading text-emerald-600 tracking-tight whitespace-nowrap flex items-center">
                             <span class="counter-number" data-target="45">0</span>%
                         </span>
                     </div>
-                    <div class="text-xs sm:text-sm text-slate-600 font-semibold leading-tight">Higher Conversion</div>
+                    <div class="text-xs sm:text-sm text-slate-600 font-semibold leading-tight whitespace-nowrap">Higher Conversion</div>
                 </div>
 
                 <!-- Metric 5 -->
-                <div class="flex flex-col items-center justify-center p-3.5 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 min-h-[115px] sm:min-h-[125px]">
-                    <div class="h-10 sm:h-12 flex items-center justify-center whitespace-nowrap mb-1">
+                <div class="flex flex-col items-center justify-center px-2 py-3.5 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 min-h-[110px] sm:min-h-[125px]">
+                    <div class="h-9 sm:h-12 flex items-center justify-center whitespace-nowrap mb-1">
                         <span class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 tracking-tight whitespace-nowrap flex items-center">
                             <span class="counter-number" data-target="100">0</span>%
                         </span>
                     </div>
-                    <div class="text-xs sm:text-sm text-slate-600 font-semibold leading-tight">Fully Managed</div>
+                    <div class="text-xs sm:text-sm text-slate-600 font-semibold leading-tight whitespace-nowrap">Fully Managed</div>
                 </div>
 
-                <!-- Metric 6 (Single-line Local Support) -->
-                <div class="flex flex-col items-center justify-center p-3.5 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 min-h-[115px] sm:min-h-[125px]">
-                    <div class="h-10 sm:h-12 flex items-center justify-center whitespace-nowrap mb-1">
-                        <span class="text-lg sm:text-2xl font-extrabold font-heading text-slate-900 tracking-tight whitespace-nowrap">
+                <!-- Metric 6 -->
+                <div class="flex flex-col items-center justify-center px-2 py-3.5 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 min-h-[110px] sm:min-h-[125px]">
+                    <div class="h-9 sm:h-12 flex items-center justify-center whitespace-nowrap mb-1">
+                        <span class="text-[17px] sm:text-xl lg:text-2xl font-extrabold font-heading text-slate-900 tracking-tight whitespace-nowrap">
                             Local Support
                         </span>
                     </div>
-                    <div class="text-xs sm:text-sm text-slate-600 font-semibold leading-tight">100% Nigeria Team</div>
+                    <div class="text-xs sm:text-sm text-slate-600 font-semibold leading-tight whitespace-nowrap">100% Nigeria Team</div>
                 </div>
 
             </div>
@@ -509,23 +559,23 @@
 
             <!-- Industry Selector Tabs (5 Categories) -->
             <div class="flex items-center justify-center gap-2 sm:gap-3 mb-12 flex-wrap" data-aos="fade-up">
-                <button onclick="switchIndustry('booking')" id="ind-btn-booking" class="ind-tab-btn active px-4 sm:px-5 py-2.5 sm:py-3 rounded-full font-heading font-bold text-xs sm:text-sm transition-all duration-300 bg-slate-900 text-white shadow-md flex items-center gap-2">
+                <button type="button" onclick="switchIndustry('booking')" id="ind-btn-booking" class="ind-tab-btn active px-4 sm:px-5 py-2.5 sm:py-3 rounded-full font-heading font-bold text-xs sm:text-sm transition-all duration-200 flex items-center gap-2">
                     <i class="ph-bold ph-calendar-check"></i>
                     <span>Booking-Based Businesses</span>
                 </button>
-                <button onclick="switchIndustry('retail')" id="ind-btn-retail" class="ind-tab-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-full font-heading font-bold text-xs sm:text-sm transition-all duration-300 bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2">
+                <button type="button" onclick="switchIndustry('retail')" id="ind-btn-retail" class="ind-tab-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-full font-heading font-bold text-xs sm:text-sm transition-all duration-200 flex items-center gap-2">
                     <i class="ph-bold ph-storefront"></i>
                     <span>Retail &amp; E-Commerce</span>
                 </button>
-                <button onclick="switchIndustry('auto')" id="ind-btn-auto" class="ind-tab-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-full font-heading font-bold text-xs sm:text-sm transition-all duration-300 bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2">
+                <button type="button" onclick="switchIndustry('auto')" id="ind-btn-auto" class="ind-tab-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-full font-heading font-bold text-xs sm:text-sm transition-all duration-200 flex items-center gap-2">
                     <i class="ph-bold ph-car"></i>
                     <span>Automotive &amp; Dealerships</span>
                 </button>
-                <button onclick="switchIndustry('b2b')" id="ind-btn-b2b" class="ind-tab-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-full font-heading font-bold text-xs sm:text-sm transition-all duration-300 bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2">
+                <button type="button" onclick="switchIndustry('b2b')" id="ind-btn-b2b" class="ind-tab-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-full font-heading font-bold text-xs sm:text-sm transition-all duration-200 flex items-center gap-2">
                     <i class="ph-bold ph-briefcase"></i>
                     <span>Professional B2B</span>
                 </button>
-                <button onclick="switchIndustry('subscriptions')" id="ind-btn-subscriptions" class="ind-tab-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-full font-heading font-bold text-xs sm:text-sm transition-all duration-300 bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2">
+                <button type="button" onclick="switchIndustry('subscriptions')" id="ind-btn-subscriptions" class="ind-tab-btn px-4 sm:px-5 py-2.5 sm:py-3 rounded-full font-heading font-bold text-xs sm:text-sm transition-all duration-200 flex items-center gap-2">
                     <i class="ph-bold ph-barbell"></i>
                     <span>Memberships &amp; Subscriptions</span>
                 </button>
@@ -1449,12 +1499,13 @@
 
     // 5 Industry Tabs Switcher (retains "Software built for your industry, designed to convert")
     function switchIndustry(key) {
-        document.querySelectorAll('.ind-panel').forEach(p => p.classList.add('hidden'));
-        document.querySelectorAll('.ind-panel').forEach(p => p.classList.remove('block'));
+        document.querySelectorAll('.ind-panel').forEach(p => {
+            p.classList.add('hidden');
+            p.classList.remove('block');
+        });
         
         document.querySelectorAll('.ind-tab-btn').forEach(btn => {
-            btn.classList.remove('bg-slate-900', 'text-white', 'shadow-md');
-            btn.classList.add('bg-slate-100', 'text-slate-700');
+            btn.classList.remove('active');
         });
 
         const activePanel = document.getElementById('ind-panel-' + key);
@@ -1465,8 +1516,7 @@
 
         const activeBtn = document.getElementById('ind-btn-' + key);
         if (activeBtn) {
-            activeBtn.classList.remove('bg-slate-100', 'text-slate-700');
-            activeBtn.classList.add('bg-slate-900', 'text-white', 'shadow-md');
+            activeBtn.classList.add('active');
         }
     }
 
