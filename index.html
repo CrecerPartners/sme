@@ -88,13 +88,8 @@
             letter-spacing: -0.03em;
         }
 
-        @media (max-width: 1024px) {
-            [data-aos] {
-                opacity: 1 !important;
-                transform: none !important;
-                transition: none !important;
-                visibility: visible !important;
-            }
+        [data-aos] {
+            will-change: transform, opacity;
         }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f8fafc; }
@@ -294,12 +289,12 @@
     <!-- ======================================================== -->
     <section class="py-14 sm:py-16 bg-white border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-500 mb-8 font-heading">
+            <p class="text-center text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-500 mb-8 font-heading" data-aos="fade-up">
                 Trusted by 500+ Ambitious Businesses, Clinics &amp; Retail Brands Across The World
             </p>
             
             <!-- Standardized Large Logo Grid (Significantly Increased Size) -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-6 sm:gap-8 lg:gap-10 items-center justify-center">
+            <div data-aos="fade-up" data-aos-delay="100" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-6 sm:gap-8 lg:gap-10 items-center justify-center">
                 <div class="flex items-center justify-center h-16 sm:h-20 p-2 sm:p-3 hover:scale-105 transition-transform duration-300">
                     <img src="/sme/assets/logos/samsung.png" alt="Samsung" class="max-h-11 sm:max-h-14 md:max-h-16 w-auto max-w-[140px] sm:max-w-[160px] object-contain">
                 </div>
@@ -324,7 +319,7 @@
             </div>
 
             <!-- 6 STRONG ANIMATED PROOF METRICS (Perfect Uniform Dimensions & No Awkward Wrapping) -->
-            <div id="stats-counter-strip" class="mt-12 pt-10 border-t border-slate-100 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4 lg:gap-5 text-center">
+            <div id="stats-counter-strip" data-aos="fade-up" data-aos-delay="150" class="mt-12 pt-10 border-t border-slate-100 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4 lg:gap-5 text-center">
                 
                 <!-- Metric 1 -->
                 <div class="flex flex-col items-center justify-center p-3.5 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 min-h-[115px] sm:min-h-[125px]">
@@ -963,7 +958,7 @@
     <!-- ======================================================== -->
     <section class="py-12 bg-gradient-to-b from-white via-blue-50/40 to-white border-b border-slate-100">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-slate-900 via-[#0a1628] to-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden border border-white/10">
+            <div class="bg-gradient-to-r from-slate-900 via-[#0a1628] to-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden border border-white/10" data-aos="fade-up">
                 <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
                 
                 <div class="grid lg:grid-cols-12 gap-8 items-center relative z-10">
@@ -1055,7 +1050,7 @@
             <div class="max-w-3xl mx-auto text-center mb-14" data-aos="fade-up">
                 
                 <!-- Urgency Pill -->
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-bold uppercase tracking-wider mb-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-bold uppercase tracking-wider mb-6 animate-pulse">
                     <i class="ph-bold ph-alarm text-base"></i>
                     <span>Limited Launch Offer • 48-Hour Allocation</span>
                 </div>
@@ -1203,7 +1198,7 @@
             </div>
 
             <!-- Embedded Form (Requested Iframe) -->
-            <div class="relative w-full max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-white" style="min-height: 720px;">
+            <div class="relative w-full max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-white" style="min-height: 720px;" data-aos="fade-up" data-aos-delay="100">
                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 z-0 p-6 text-center">
                     <svg class="animate-spin h-10 w-10 text-blue-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -1237,7 +1232,7 @@
             </div>
 
             <!-- PAYMENT SECURITY & WHAT HAPPENS AFTER PAYMENT REASSURANCE (Point 8) -->
-            <div class="max-w-3xl mx-auto mt-10 bg-white/5 border border-white/10 rounded-2xl p-6 text-xs text-slate-300">
+            <div class="max-w-3xl mx-auto mt-10 bg-white/5 border border-white/10 rounded-2xl p-6 text-xs text-slate-300" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex items-center gap-2 text-white font-bold text-sm mb-3">
                     <i class="ph-bold ph-shield-check text-emerald-400 text-lg"></i>
                     <span>Bank-Grade Security &amp; 100% Guaranteed Onboarding</span>
@@ -1263,7 +1258,7 @@
             </div>
 
             <!-- SECONDARY OPTION: NOT READY TO MAKE PAYMENT YET? (Point 8) -->
-            <div class="text-center mt-8 space-y-3">
+            <div class="text-center mt-8 space-y-3" data-aos="fade-up" data-aos-delay="250">
                 <p class="text-sm text-slate-300">
                     Not ready to make payment yet?
                     <a href="https://www.bluerocktechnologies.net/talk-to-sales" class="text-blue-400 font-bold hover:text-white underline underline-offset-4 ml-1 transition-colors">
@@ -1410,12 +1405,9 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         AOS.init({
-            duration: 600,
+            duration: 650,
             once: true,
-            offset: 20,
-            disable: function() {
-                return window.innerWidth < 1024;
-            },
+            offset: 30,
             easing: 'ease-out-cubic'
         });
         calculateROI();
